@@ -1,0 +1,25 @@
+{
+	"name": "nestjs-prisma",
+	"image": "node:22-bookworm",
+	"features": {
+		"ghcr.io/devcontainers-extra/features/nestjs-cli": {},
+		"ghcr.io/devcontainers-extra/features/prisma": {},
+		"ghcr.io/devcontainers/features/common-utils": {
+        "configureZshAsDefaultShell": true
+    }
+	},
+	"runArgs": ["--name", "dev-container-seeyourchess-back"],
+
+	"postCreateCommand": "npm install",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"prisma.prisma",
+			"eamodio.gitlens"
+			]
+		}
+	}
+}

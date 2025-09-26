@@ -1,0 +1,15 @@
+{
+  // Tabs e formatação
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+
+  // Node/NestJS
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Auto save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+
+  "json.schemas": [] //Active to stop warning on devcontainer.json, might have not intended effects
+}
