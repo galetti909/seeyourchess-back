@@ -2,7 +2,29 @@
   // Tabs e formatação
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
+
+   // Sempre formatar ao salvar
   "editor.formatOnSave": true,
+
+  // Rodar ESLint ao salvar também
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // Prettier como formatador padrão
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // Node/NestJS
   "typescript.tsdk": "node_modules/typescript/lib",
