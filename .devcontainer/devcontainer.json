@@ -2,7 +2,6 @@
 	"name": "nestjs-prisma",
 	"image": "node:22-bookworm",
 	"features": {
-		"ghcr.io/devcontainers-extra/features/nestjs-cli": {},
 		"ghcr.io/devcontainers-extra/features/prisma": {},
 		"ghcr.io/devcontainers/features/common-utils": {
         "configureZshAsDefaultShell": true
@@ -10,7 +9,7 @@
 	},
 	"runArgs": ["--name", "dev-container-seeyourchess-back"],
 
-	"postCreateCommand": "npm install",
+	"postCreateCommand": "npm i -g @nestjs/cli@11 && npm install",
 
 	"customizations": {
 		"vscode": {
