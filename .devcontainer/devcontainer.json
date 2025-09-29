@@ -17,7 +17,8 @@
 			"dbaeumer.vscode-eslint",
 			"esbenp.prettier-vscode",
 			"prisma.prisma",
-			"eamodio.gitlens"
+			"eamodio.gitlens",
+			"github.vscode-pull-request-github"
 			]
 		}
 	}
