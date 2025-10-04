@@ -12,6 +12,14 @@
     "source.organizeImports": "explicit"
   },
 
+  // Terminal integrado com ZSH por padrão
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/usr/bin/zsh"
+    }
+  },
+
   // Prettier como formatador padrão
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
