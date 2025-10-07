@@ -6,9 +6,8 @@ export class PrismaService
   extends PrismaClient
   implements OnModuleInit, OnModuleDestroy
 {
-  async onModuleInit(): Promise<void> {
+  async onModuleInit() {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       await this.$connect();
     } catch (error) {
       console.error('Database connection failed', error);
@@ -16,9 +15,8 @@ export class PrismaService
     }
   }
 
-  async onModuleDestroy(): Promise<void> {
+  async onModuleDestroy() {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       await this.$disconnect();
     } catch (error) {
       console.error('Database disconnection failed', error);
