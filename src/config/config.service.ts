@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import * as dotenv from 'dotenv';
 import * as Joi from 'joi';
-import { NodeEnv } from 'src/common/enums/node-env.enum';
+import { NodeEnv } from 'src/config/enums/node-env.enum';
 
 dotenv.config();
 
