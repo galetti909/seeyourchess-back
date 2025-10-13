@@ -18,7 +18,8 @@
 			"esbenp.prettier-vscode",
 			"prisma.prisma",
 			"eamodio.gitlens",
-			"github.vscode-pull-request-github"
+			"github.vscode-pull-request-github",
+			"Gruntfuggly.todo-tree"
 			]
 		}
 	}

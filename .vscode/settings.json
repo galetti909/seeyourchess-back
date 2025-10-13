@@ -34,6 +34,22 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  // TO DO Tree
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "background": "#FFD700",
+      "foreground": "#000"
+    },
+  },
+  "todo-tree.filtering.includeGlobs": ["**/*.ts"],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/**",
+    "**/dist/**"
+  ],
+  "todo-tree.tree.showScanModeButton": false,
+
+
   // Node/NestJS
   "typescript.tsdk": "node_modules/typescript/lib",
 
