@@ -19,8 +19,8 @@ async function bootstrap() {
   app.useGlobalFilters(new GlobalExceptionFilter());
 
   const docs_config = new DocumentBuilder()
-    .setTitle('API')
-    .setDescription('Documentação da API')
+    .setTitle('See Your Chess API')
+    .setDescription('Documentation of See Your Chess API')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, docs_config);
