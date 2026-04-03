@@ -11,30 +11,34 @@ generator client {
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  directUrl = env("DIRECT_URL") // TODO: understand error
 }
 
 model User {
-  user_id           String            @id @default(uuid())
-  email             String            @unique
+  user_id           String                 @id @default(uuid())
+  email             String                 @unique
   hashed_password   String
-  username          String            @unique
-  is_email_verified Boolean           @default(false)
-  created_at        DateTime          @default(now())
-  updated_at        DateTime          @updatedAt
-  validation_tokens ValidationToken[]
+  username          String                 @unique
+  is_email_verified Boolean                @default(false)
+  created_at        DateTime               @default(now())
+  updated_at        DateTime               @updatedAt
+  validation_tokens ValidationEmailToken[]
+  reset_tokens      ResetPasswordToken[]
 }
 
-model ValidationToken {
-  token_hash     String         @id
-  user_id        String
-  user           User           @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
-  type           ValidationType
-  is_most_recent Boolean        @default(true)
-  created_at     DateTime       @default(now())
+model ValidationEmailToken {
+  token_hash String   @id
+  user_id    String
+  email      String
+  user       User     @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+  created_at DateTime @default(now())
 }
 
-enum ValidationType {
-  EMAIL_VERIFICATION
-  PASSWORD_RESET
+model ResetPasswordToken {
+  token_hash   String   @id
+  user_id      String
+  email        String
+  user         User     @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+  created_at   DateTime @default(now())
+  already_used Boolean  @default(false)
 }
