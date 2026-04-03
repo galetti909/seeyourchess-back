@@ -4,8 +4,8 @@ import { SYCBaseException } from './base.exception';
 export class ExpectedException extends SYCBaseException {
   constructor(
     message: string,
-    details?: any,
     status: HttpStatus = HttpStatus.BAD_REQUEST,
+    details: any = undefined,
   ) {
     super({ message, details }, status);
   }
