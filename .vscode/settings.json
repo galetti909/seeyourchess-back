@@ -35,10 +35,19 @@
   },
 
   // TO DO Tree
+  "todo-tree.general.tags": [
+    "TODO",
+    "WARN"
+  ],
   "todo-tree.highlights.customHighlight": {
     "TODO": {
       "icon": "check",
-      "background": "#FFD700",
+      "background": "#33ff00",
+      "foreground": "#000"
+    },
+    "WARN": {
+      "icon": "check",
+      "background": "#ffe600",
       "foreground": "#000"
     },
   },
